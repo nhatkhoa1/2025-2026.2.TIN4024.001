@@ -71,19 +71,17 @@ void runTrafficLight(int seconds, int ledPin, bool isBlinking) {
   }
 }
 
-// --- CHẾ ĐỘ BAN ĐÊM (Nháy Vàng) ---
 void runNightMode() {
   Serial.println("--- CHE DO BAN DEM (Nhay Vang) ---");
   
   digitalWrite(LED_RED, LOW);
   digitalWrite(LED_GREEN, LOW);
   digitalWrite(LED_BLUE, LOW);
-  
-  // Hiện gạch ngang
+
   uint8_t data[] = { 0x40, 0x40, 0x40, 0x40 }; 
   display.setSegments(data);
 
-  // Nháy Vàng
+
   digitalWrite(LED_YELLOW, HIGH);
   delay(500);
   digitalWrite(LED_YELLOW, LOW);
