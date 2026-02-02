@@ -40,18 +40,13 @@ void checkPedestrianButton() {
   }
 }
 
-// --- HÀM CHẠY ĐÈN (Hỗ trợ nhấp nháy) ---
-// isBlinking = true: Đèn sẽ chớp tắt (dùng cho đèn Xanh)
-// isBlinking = false: Đèn sáng đứng (dùng cho đèn Đỏ/Vàng)
+
 void runTrafficLight(int seconds, int ledPin, bool isBlinking) {
-  // Tắt hết đèn trước khi chạy pha này
   digitalWrite(LED_RED, LOW);
   digitalWrite(LED_YELLOW, LOW);
   digitalWrite(LED_GREEN, LOW);
 
   for (int i = seconds; i >= 0; i--) {
-    // Nếu ánh sáng thay đổi đột ngột (đang chạy mà trời tối) -> Thoát ngay
-    // Lưu ý: Logic ở đây phải khớp với logic trong loop()
     if (analogRead(LDR_PIN) > LIGHT_THRESHOLD) return; 
 
     display.showNumberDec(i, false);
