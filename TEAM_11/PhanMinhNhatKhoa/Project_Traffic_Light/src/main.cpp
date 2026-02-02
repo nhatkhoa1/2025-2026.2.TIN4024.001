@@ -81,7 +81,6 @@ void runNightMode() {
   uint8_t data[] = { 0x40, 0x40, 0x40, 0x40 }; 
   display.setSegments(data);
 
-
   digitalWrite(LED_YELLOW, HIGH);
   delay(500);
   digitalWrite(LED_YELLOW, LOW);
