@@ -1,0 +1,16 @@
+{
+  "folders": [
+	{
+		"path": "../PhanMinhNhatKhoa"
+	},
+	{
+		"name": "Project_Traffic_Light",
+		"path": "../PhanMinhNhatKhoa/Project_Traffic_Light"
+	},
+	{
+		"name": "ESP32_DHT_OLED",
+		"path": "."
+	}
+],
+  "settings": {}
+}
